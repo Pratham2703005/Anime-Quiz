@@ -1,0 +1,9 @@
+ul{
+    background-color: '#090c26';
+    color:rgba(255, 255, 255, 0.769);
+}
+.formclass label,
+.formclass div,
+.formclass button{
+    font-size: 1.5rem !important;
+}

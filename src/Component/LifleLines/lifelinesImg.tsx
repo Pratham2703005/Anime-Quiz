@@ -1,0 +1,1 @@
+export const lifelinesimg =['/audience-correct.png','/fifty-correct.png', '/phone-correct.png'];

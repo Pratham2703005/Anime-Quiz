@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: "Jersey 15", serif !important;
+}
+body{
+    overflow: hidden;
+    font-family: "Jersey 15", serif !important;
+    background-image: url('/backgound.jpg');    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+:root {
+    --nav-from: #6b46c1; 
+    --nav-to: #3b82f6;
+    --nav-text : #fff;
+    --right-nav-text : #fff;
+    --right-nav-bg  : #111827;
+    --right-nav-heading  : #fff;
+    --right-nav-current-item: #eab308;
+    --right-nav-current-itemText: #111827;
+    --right-nav-next-item: #3b82f6;
+    --right-nav-loose-item: #ef4444;
+    --right-nav-itemText: #fff;
+    --right-nav-item: #374151;
+    --right-nav-currentTag-item: #111827;
+    --right-nav-nextTag-item: #1d4ed8;
+    --right-nav-looseTag-item: #b91c1c;
+    --right-nav-Tag-itemText: #fff;
+
+    --operateBtn-from: rgba(6, 18, 52, 0.95);  /* Dark color with opacity */
+    --operateBtn-to: rgba(6, 18, 52, 0.95);
+    --operateBtn-hover-from: rgba(6, 18, 52,1);  /* Slightly lighter for hover effect */
+    --operateBtn-hover-to: rgba(6, 18, 52, 1);
+    --operateBtn-text :#ffffffeb;
+    --operateBtn-focus: #eab308;
+    --operateBtn-active-to:rgba(6,18,52,85%);
+    --operateBtn-active-from:rgba(6,18,52,85%);
+
+    --clock-inner: #010718f2;
+    --clock-outer: #facc15;
+
+    --question-text:#fff;
+
+    --option-correct-bg:rgb(22 163 74 / 0.9) !important;
+    --option-correct-focus:#4ade80 !important;
+    --option-correct-border:#22c55e !important;
+    --option-incorrect-bg:rgb(220 38 38 / 0.9);
+    --option-incorrect-focus:#f87171;
+    --option-incorrect-border:#ef4444;
+    --option-focus:#facc15;
+    --option-from: #fbbf24; 
+    --option-to: #f59e0b; 
+    --option-disable-bg:rgba(30,31,34,0.95);
+    --option-enable-bg:rgba(6,18,52,0.95);
+    --option-disable-text:#4b5563;
+    --option-enable-text:#fff;
+    --option-enable-border:#efd80a;
+    --option-disable-border:#efd80a;
+    --option-correct-border:#16a34a !important;
+    --option-incorrect-border:#dc2626;
+    --option-enable-hover-border:#eab308;
+    --option-disable-hover-border:#eab308;
+    --option-correct-hover-border:#22c55e;
+    --option-incorrect-hover-border:#ef4444;
+    
+    --gameWin-panel:#1f2937;
+    --gameWin-panel-heading:#fff;
+    --gameWin-score-head: #60a5fa;
+    --gameWin-score-num:#93c5fd;
+    --gameWin-status:#374151;
+    --gameWin-status-panel: #4b5563;
+    --gameWin-status-load:#3b82f6;
+    --gameWin-status-message:#9ca3af;
+    --gameWin-retryBtn-bg:#2563eb;
+    --gameWin-retryBtn-text:#fff;
+    --gameWin-retryBtn-hover:#1d4ed8;
+    --gameWin-retryBtn-focus:#3b82f6;
+
+    --gameLos-panel:#1f2937;
+    --gameLos-trophy:#facc15;
+    --gameLos-frown:#3b82f6;
+    --gameLos-panel-head:#f3f4f6;
+    --gameLos-panel-subhead:#d1d5db;
+    --gameLos-score:#818cf8;
+    --gameLos-status:#374151;
+    --gameLos-status-text:#9ca3af;
+    --gameLos-status-score:#e5e7eb;
+    --gameLos-status-total:#9ca3af;
+    --gameLos-status-money:#e5e7eb;
+
+    --form-bg:rgb(4 8 48 / 0.9);
+    --form-border: rgb(59 130 246 / 0.2);
+    --form-style-shade:#3b82f6;
+    --form-head:#fff;
+    --form-textfield:rgb(30 58 138 / 0.2);
+    --form-button-from-hover:#1d4ed8;
+    --form-button-to-hover:#3b82f6;
+    --form--fields-text:#fff;
+    
+    --form-select-bg:rgb(10, 21, 70);
+    --form-select-text:#ffffffbf;
+    --form-select-border:rgba(59, 130, 246, 0.5);
+    --from-button-from:#2563eb;
+    --from-button-to:#60a5fa;
+    --form-textfield-border:rgba(59,130,246,0.5);
+    --form-textfield-border-hover:rgba(59, 130, 246, 0.8);
+    --form-textfield-border-focus:#3B82F6;
+    --form-textfield-border-label:rgba(255, 255, 255, 0.7);
+    --form-textfield-border-outline:#fff;
+    --form-button-shadow:rgba(59, 130, 246, 0.3);
+
+    
+
+
+
+    
+}
+@layer utilities {
+   .custom-gradient {
+    background: linear-gradient(to right, var(--nav-from), var(--nav-to));
+   }
+    .operateBtn-gradient {
+        background: linear-gradient(to left, var(--operateBtn-from), var(--operateBtn-to));
+        transition: background-color 0.3s ease;
+    }
+    .operateBtn-gradient:hover {
+        background: linear-gradient(to left, var(--operateBtn-hover-from), var(--operateBtn-hover-to));
+    }
+    .option-gradient{
+        background: linear-gradient(to right, var(--option-from), var(--option-to));
+    }
+    .formBtn-gradient{
+        background: linear-gradient(to right, var(--from-button-from), var(--form,--from-button-to));
+    }
+    .formBtn-shadow{
+        box-shadow: 0 4px 6px var(--form-button-shadow);
+    }
+}
+
